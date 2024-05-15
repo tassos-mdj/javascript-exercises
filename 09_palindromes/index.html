@@ -8,11 +8,9 @@
 <body>
     <script>
         const palindromes = function (str) {
-    str.toLowerCase().replace(/[^a-z]/gi, '');
-    let revStr = str.split("").reverse().join("");
-    console.log(str);
-    console.log()
-    return str === revStr;
+    let strippedStr = str.toLowerCase().replace(/[^a-z,0-9]/gi, '');
+    let revStr = strippedStr.split("").reverse().join("");
+    return strippedStr === revStr;
 };
     </script>
 </body>
